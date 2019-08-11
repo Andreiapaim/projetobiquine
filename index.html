@@ -16,7 +16,6 @@
 		<script src="js/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script> 	
 		<script type="text/javascript" src="slick/slick.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
-
 		</head>
 	<body>
 
@@ -26,71 +25,74 @@
 	<div class="row">
 		<div class="col-md-12">
 
-		<!-- nav -->
-			  <div class="navbar navbar-fixed-top">
-				<div class="container">
-				<div class="row">
-				
-				  <div id="barra">	
-				  <!-- logo --> 
-				  <a class="navbar-brand" href="index.html"><img alt="logo" src="images/logo.png"></a> 
+		<nav class="navbar navbar-expand-md" style="height:75px;">
+		  
+		  <div class="barra">
+		  
+		  <!-- Toggler/collapsibe Button -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
 
-				  <!-- mainmenu start -->
-					<nav id="menu-center">
-					  <ul>
-						<li><a id="biquines" href="#">BIQUÍNIS</a></li>
-						<li class="space"></li>
-						<li><a href="#">MAIÔS</a></li>
-						<li class="space"></li>
-						<li><a href="#">BODIES</a></li>
-						<li class="space"></li>
-						<li><a href="#">SAÍDAS</a></li>
-						<li class="space"></li>
-						<li><a href="#">SALE</a></li>
-					  </ul>
-					</nav>
-				  <!-- mainmenu end -->
-				  
-				  
-				  <!-- menu dir -->
-					<nav id="menu-dir">
-					  <ul>
-						<li><a id="lupa" href="#"><img src="images/icon-lupa.png"/></a></li>
-						<li class="space"></li>
-						<li><a href="#"><img src="images/icon-pessoa.png"/></a></li>
-						<li class="space"></li>
-						<li><a id="carrinho" href="#"><img src="images/icon-mala.png"/></a></li>
-					  </ul>
-					</nav>
-				  <!-- menu dir end -->
-				  </div>
-				  
-				</div>
-				</div>
-				<!-- .container -->
-			  </div>
-			  <!-- nav end -->
+		  <!-- Navbar links -->
+		  <div class="collapse navbar-collapse btnbar" id="collapsibleNavbar">
 
-			  <div id="barravermelha">
-			  </div>			  
+		  <!-- Brand -->
+		  <div class="arealogo"><a id="logo" class="logo" href="index.html"></a></div>
 
-			  <div id="barrabiquine">
-				  <p class="item-b">Cortininhas</p>
-				  <p class="item-b">Croppeds</p>
-				  <p class="item-b">Tomara que caia</p>
-				  <p class="item-b">Lacinho</p>
-				  <p class="item-b">Calcinha larga</p>
-				  <p class="item-b">Levanta bumbum</p>
-				  <p class="item-b">Trending</p>
-			  </div>			  
+		  <ul class="navbar-nav" style="margin:0 auto;">
+			  <li class="nav-item">
+				<a class="nav-link" href="#">BIQUÍNIS</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">MAIÔS</a>
+			  </li> 
+			  <li class="nav-item">
+				<a class="nav-link" href="#">BODIES</a>
+			  </li> 
+			  <li class="nav-item">
+				<a class="nav-link" href="#">SAÍDAS</a>
+			  </li> 
+			  <li class="nav-item">
+				<a class="nav-link" href="#">ROUPAS</a>
+			  </li> 
+			  <li class="nav-item">
+				<a class="nav-link" href="#">SALE</a>
+			  </li> 
+			</ul>
 
-			  <div id="barraprocura">
-			  <p style="padding:20px;text-align:center;">Digite aqui o que procura</p>
-			  </div>			  
+			<ul class="nav navbar-nav" style="margin: 0 auto;">
+				<li><a id="lupa" data-state="1" href="#"></a></li>
+				<li><a id="pessoa" data-state="1" href="#"></a></li>
+				<li><a id="carrinho" data-state="1" href="#"></a></li>
+			 </ul>
+		  </div> 
+		  
+		  
+			<div id="barrapessoa">
+			<div class="bpemail">Olá Vitorelli@onesky.com.br</div>
+			<div class="grupoitems">
+			<a class="bpitem" href="#">Sair</a>
+			<a class="bpitem" href="#">Minha Conta</a>
+			<a class="bpitem" href="#">Meus Pedidos</a>
+			<br>
+			</div>			  
+			</div>
 
-			  <div id="barracarrinho">
-			  <img src="images/carrinho.jpg"/>
-			  </div>			  
+			<div id="barracarrinho">
+			<div class="bctexto1">SEU CARRINHO ESTÁ VAZIO</div>
+			<button class="btnadic">ADICIONAR PRODUTOS</button>
+			</div>
+		  
+		  
+		  </div>
+		  
+		</nav>
+
+
+			<div id="barraprocura">
+			<p>Digite aqui o que procura</p>
+			</div>			  
 
 		
 			<!-- carousel -->
@@ -102,23 +104,15 @@
 			  </ol>
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
-				  <a href="#"><img class="d-block w-100" src="images/banner-principal.jpg" alt="First slide"></a>
+				  <img class="d-block w-100" src="images/banner-principal.jpg" alt="First slide">
 				</div>
 				<div class="carousel-item">
-				  <a href="#"><img class="d-block w-100" src="images/banner-principal.jpg" alt="Second slide"></a>
+				  <img class="d-block w-100" src="images/banner-principal.jpg" alt="Second slide">
 				</div>
 				<div class="carousel-item">
-				  <a href="#"><img class="d-block w-100" src="images/banner-principal.jpg" alt="Third slide"></a>
+				  <img class="d-block w-100" src="images/banner-principal.jpg" alt="Third slide">
 				</div>
 			  </div>
-			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			  </a>
 			</div>		
 			<!-- carousel end -->
 		
@@ -129,17 +123,44 @@
 		<div class="col-md-11">
 
 		<!-- vitrine -->
-      <div class="vitrine" style="margin:20px;">
+      <div class="vitrine">
           <div class="row">
 
 				<div class="col-md-4">
-				  <a href="#"><img src="images/biquine1.jpg" class="img-fluid"/></a>
+				  <a href="#" class="portfolio-reaction">
+				  <img src="images/biquine1.jpg" class="img-fluid"/>
+				  <div class="headline-overlay">
+					<div class="gruponomes">
+					<div class="element-1">MONTE</div>
+					<div class="element-2">----------</div>
+					<div class="element-3">outro texto</div>
+					</div>
+				  </div>
+				  </a>
 				</div>
 				<div class="col-md-4">
-				  <a href="#"><img src="images/biquine2.jpg" class="img-fluid"/></a>
+				  <a href="#" class="portfolio-reaction">
+				  <img src="images/biquine2.jpg" class="img-fluid"/>
+				  <div class="headline-overlay">
+					<div class="gruponomes">
+					<div class="element-1">SEU</div>
+					<div class="element-2">----------</div>
+					<div class="element-3">outro texto</div>
+					</div>
+				  </div>
+				  </a>
 				</div>
 				<div class="col-md-4">
-				  <a href="#"><img src="images/biquine3.jpg" class="img-fluid"/></a>
+				  <a href="#" class="portfolio-reaction">
+				  <img src="images/biquine3.jpg" class="img-fluid"/>
+				  <div class="headline-overlay">
+					<div class="gruponomes">
+					<div class="element-1">BIQUINE</div>
+					<div class="element-2">----------</div>
+					<div class="element-3">outro texto</div>
+					</div>
+				  </div>
+				  </a>
 				</div>
 
 
@@ -178,63 +199,73 @@
 
 		  <div class="regular slider">
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine1.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">129.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine2.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">119.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
-			  <img src="images/vitrine3.jpg">
 			  <div class="item-slider">
+			  <img src="images/vitrine3.jpg">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">109.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine4.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">149.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
-			  <img src="images/vitrine5.jpg">
 			  <div class="item-slider">
+			  <img src="images/vitrine5.jpg">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">159.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
-			</div>
+			 </div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine1.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">169.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine2.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">149.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine3.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">129.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
+			  <div class="item-slider">
 			  <img src="images/vitrine4.jpg">
-			  <div class="item-slider">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">119.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 			<div>
-			  <img src="images/vitrine5.jpg">
 			  <div class="item-slider">
+			  <img src="images/vitrine5.jpg">
 			  <a href="">Biquíni cortininha palmeira<br>R$ <span class="valor">199.90</span></a>
+			  <br><button class="btncomprar">COMPRAR</button>
 			  </div>
 			</div>
 		  </div>
@@ -242,10 +273,10 @@
 
 
 	<div class="row justify-content-md-center">
-		<div class="col-md-9">
+		<div class="col-md-12">
 
 		<!-- info1 -->
-      <div class="info1" style="margin:20px auto">
+      <div class="info1">
           <div class="row">
 
 				<div class="col-md-4">
@@ -275,7 +306,7 @@
 
 
 		<!-- info2 -->
-      <div class="info2" style="margin-bottom:20px;">
+      <div class="info2">
           <div class="row justify-content-md-center">
 
 				<div class="col-md-2">
@@ -320,7 +351,7 @@
 				  </form>
 				</div>
 				<div class="col-md-1">
-				  <p class="item-info2"><img src="images/icon-instagram.png"/></p>
+				  <p class="item-info2 pull-right"><img src="images/icon-instagram.png"/></p>
 				</div>
 
 
@@ -347,32 +378,33 @@
 		<div class="rodape">
           <div class="row">
 
-				<div class="col-md-1">
-				</div>
 				
 				<div class="col-md-3">
-				  <img src="images/logo-bottom.png" class="img-fluid" style="float:left;"/>
+				  <img src="icons/1_oxua_home_3b_24.png" class="img-fluid" style="float:left;padding: 10px 0;"/>
 				  <p class="item-rodape1">&nbsp;&nbsp;CNPJ 23.104.344/0001-46 Avenida São Paulo 
 					<br>&nbsp;&nbsp;1547 Zona 02 - Salas 1 e 2 Cianorte - PR</p>
 				</div>
 				
 				<div class="col-md-4">
 				 <p class="item-rodape2">FORMA DE PAGAMENTO&nbsp;&nbsp;</p>
-				 <div style="padding:25px 0;">
-				  <img src="images/visa.png" class="img-fluid"/>
-				  <img src="images/master.png" class="img-fluid"/>
-				  <img src="images/american.png" class="img-fluid"/>
-				  <img src="images/dinners.png" class="img-fluid"/>
-				  <img src="images/boleto.png" class="img-fluid"/>
+				 <div class="item-grupo20">
+				  <img src="icons/1_oxua_home_3b_27.png" class="img-fluid"/>
 				  </div>
 				</div>
 				
 				<div class="col-md-2">
 				 <p class="item-rodape2">SEGURANÇA&nbsp;&nbsp;</p>
-				 <div style="padding:20px 0;">
-				  <img src="images/explorer.png" class="img-fluid"/>
-				  <img src="images/blindado.png" class="img-fluid"/>
+				 <div class="item-grupo20">
+				  <img src="icons/1_oxua_home_3b_30.png" class="img-fluid"/>
+				  <img src="icons/1_oxua_home_3b_33.png" class="img-fluid"/>
 				  </div>
+				</div>
+
+				<div class="col-md-3">
+				 <div class="item-grupo10">
+				  <img src="icons/1_oxua_home_3b_19.png" class="img-fluid"/>
+				  <img src="icons/1_oxua_home_3b_21.png" class="img-fluid"/>
+				 </div>
 				</div>
 
 
@@ -385,7 +417,7 @@
 	</div>	
 
 
-
+<button  id="Btntop" title="Go to top"><i class="fa fa-chevron-up icon-top" aria-hidden="true"></i> <span>Voltar</span> <span>ao Topo</span></button>
 
 </div>	
 

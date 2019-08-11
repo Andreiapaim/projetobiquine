@@ -2,49 +2,103 @@
 $(document).ready(function(){
 
 	atualizarvalor();
- 
-      $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 5
-      });
+    CarrosselProduto(".carousel");
+    Carrossel('.regular', '.item-slider', 5, 4, 3, 2, 1);
 
-	$("#biquines").hover(function()
+	$("#Btntop").click(function()
 	  {    
-		$("#barra").addClass("barra");
-		$("#barravermelha").show();
-		$("#barrabiquine").show();
+	    topFunction();
+	  });
+
+	$(window).scroll(function(){
+	  var sticky = $('.navbar'),
+		  scroll = $(window).scrollTop();
+
+	  if (scroll >= 100) {
+	  sticky.addClass('fundobranco');
+	  $(".nav-item a").addClass('nav-item-hover');
+	  $("#logo").addClass('logohover');
+	  $("#lupa").addClass('lupahover');
+	  $("#pessoa").addClass('pessoahover');
+	  $("#carrinho").addClass('carrinhohover');
+	  $("#Btntop").show();
+	  }
+	  else {
+	  sticky.removeClass('fundobranco');
+	  $(".nav-item a").removeClass('nav-item-hover');
+	  $("#logo").removeClass('logohover');
+	  $("#lupa").removeClass('lupahover');
+	  $("#pessoa").removeClass('pessoahover');
+	  $("#carrinho").removeClass('carrinhohover');
+	  $("#Btntop").hide();
+	  }
+	  
+	});
+
+	$("#lupa").click(function()
+	  {    
+
+		if ($(this).data("state") == 1) 
+		{
+			$(this).addClass("iconx");
+			$(this).data("state", 2);
+			$("#barraprocura").show();
+		}
+		else
+		{
+			$(this).removeClass("iconx");
+			$(this).data("state", 1);
+			$("#barraprocura").hide();
+		}
+		
 	  });
 
 
-	$("#lupa").hover(function()
+	$("#pessoa").click(function()
 	  {    
-		$("#barra").addClass("barra");
-		$("#barraprocura").show();
 
+		if ($(this).data("state") == 1) 
+		{
+			$(this).addClass("iconx");
+			$(this).data("state", 2);
+			$("#barrapessoa").show();
+		}
+		else
+		{
+			$(this).removeClass("iconx");
+			$(this).data("state", 1);
+			$("#barrapessoa").hide();
+		}
+		
 	  });
 
-	$("#carrinho").hover(function()
-	  {    
-		$("#barra").addClass("barra");
-		$("#barracarrinho").show();
 
+	$("#carrinho").click(function()
+	  {    
+
+		if ($(this).data("state") == 1) 
+		{
+			$(this).addClass("iconx");
+			$(this).data("state", 2);
+			$("#barracarrinho").show();
+		}
+		else
+		{
+			$(this).removeClass("iconx");
+			$(this).data("state", 1);
+			$("#barracarrinho").hide();
+		}
+		
 	  });
 
 
-	$("#carouselExampleIndicators").hover(function()
-	  {    
-		$("#barra").removeClass("barra");
-		$("#barraprocura").hide();
-		$("#barracarrinho").hide();
-		$("#barravermelha").hide();
-		$("#barrabiquine").hide();
-
-	  });
 
  });
 
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 function atualizarvalor()
   {
@@ -60,3 +114,56 @@ function atualizarvalor()
     });  
  
   }
+
+function CarrosselProduto(classe) {
+  $(classe).carousel({
+    interval: 5000
+  });
+}
+
+function Carrossel(classe, filho, show1, show2, show3, show4, show5) {
+  var $item = $("" + classe + "");
+  $item.find(".helperComplement").remove();
+  if ($item.find("" + filho + "").length > 0) {
+    $item.slick({
+      infinite: false,
+      speed: 600,
+      slidesToShow: show1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      dots: false,
+      nextArrow: '<span class="fa fa-chevron-right next"></span>',
+      prevArrow: '<span class="fa fa-chevron-left prev"></span>',
+      responsive: [
+        {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: show2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 879,
+          settings: {
+            slidesToShow: show3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: show4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: show5,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
+}
